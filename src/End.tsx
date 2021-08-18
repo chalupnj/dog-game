@@ -5,6 +5,14 @@ import dogsArray from "./dogs";
 
 const ImageContainer = styled.div`
   width: 30%;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `;
 
 const Image = styled.img`

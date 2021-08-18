@@ -8,6 +8,10 @@ import alphabet from "./alphabet";
 const Subcontainer = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ImageRevealContainer = styled.div`
@@ -20,6 +24,14 @@ const ImageRevealContainer = styled.div`
 const LeashImageContainer = styled.div`
   display: flex;
   max-width: 400px;
+
+  @media (max-width: 768px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 150px;
+  }
 `;
 
 const DogImageContainer = styled.div<{ revealAmount: number }>`
@@ -35,6 +47,14 @@ const DogImageContainer = styled.div<{ revealAmount: number }>`
     position: absolute;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    max-width: 60%;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 75%;
+  }
 `;
 
 const Image = styled.img`
@@ -47,28 +67,71 @@ const GuessContainer = styled.div`
   flex: 2;
   flex-direction: column;
   padding: 48px;
+
+  @media (max-width: 768px) {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0;
+  }
 `;
 
 const AnswerSpaces = styled.div`
   display: flex;
   flex-direction: row;
-  font-size: 24px;
+  font-size: 32px;
   margin: 8px 0;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 22px;
+    margin: 4px 0;
+  }
 `;
 
 const Space = styled.div`
   border-bottom: 2px solid #000000;
-  height: 32px;
+  height: 38px;
   margin: 4px 8px;
   text-align: center;
   text-transform: uppercase;
   width: 48px;
+
+  @media (max-width: 768px) {
+    height: 38px;
+    margin: 8px 4px;
+    width: 36px;
+  }
+
+  @media (max-width: 550px) {
+    margin: 8px 4px;
+    width: 30px;
+  }
+
+  @media (max-width: 576px) {
+    height: 28px;
+    width: 20px;
+  }
 `;
 
 const FeedbackMessage = styled.div<{ correct: boolean }>`
   color: ${({ correct }) => (correct ? "green" : "red")};
   font-size: 24px;
   margin: 8px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 `;
 
 const AlphabetContainer = styled.div`
@@ -78,14 +141,22 @@ const AlphabetContainer = styled.div`
 `;
 
 const AlphabetHeader = styled.div`
-  font-size: 20px;
+  font-size: 24px;
   margin: 32px 8px 8px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 `;
 
 const AlphabetButton = styled.button`
   background-color: #fff;
   border: 2px solid #000000;
-  font-size: 24px;
+  font-size: 32px;
   height: 64px;
   margin: 8px;
   text-align: center;
@@ -95,6 +166,19 @@ const AlphabetButton = styled.button`
   :disabled {
     border-color: #b7b7b7;
     color: #b7b7b7;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    height: 54px;
+    width: 54px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 22px;
+    height: 48px;
+    margin: 4px;
+    width: 48px;
   }
 `;
 
