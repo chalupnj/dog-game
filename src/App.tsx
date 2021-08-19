@@ -104,8 +104,8 @@ export interface Dog {
 }
 
 const App = () => {
-  const [gamePhase, setGamePhase] = useState<GamePhase>("end");
-  const [win, setWin] = useState<boolean>(true);
+  const [gamePhase, setGamePhase] = useState<GamePhase>("start");
+  const [win, setWin] = useState<boolean>(false);
   const [dog, setDog] = useState<Dog>(
     dogsArray.sort(() => 0.5 - Math.random())[0]
   );
