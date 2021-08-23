@@ -106,6 +106,26 @@ export const dogs = [
     image: findDogImage("dog-photo-23"),
     name: "seymour",
   },
+  {
+    image: findDogImage("dog-photo-24"),
+    name: "macklin hashbrown",
+  },
+  {
+    image: findDogImage("dog-photo-25"),
+    name: "brown dog",
+  },
+  {
+    image: findDogImage("dog-photo-26"),
+    name: "max",
+  },
+  {
+    image: findDogImage("dog-photo-27"),
+    name: "sasha",
+  },
+  {
+    image: findDogImage("dog-photo-28"),
+    name: "pogikins",
+  },
 ];
 
 export default dogs;

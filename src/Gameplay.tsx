@@ -19,6 +19,10 @@ const ImageRevealContainer = styled.div`
   display: flex;
   flex: 2;
   flex-direction: column;
+
+  @media (max-width: 576px) {
+    flex-direction: row;
+  }
 `;
 
 const LeashImageContainer = styled.div`
@@ -30,7 +34,7 @@ const LeashImageContainer = styled.div`
   }
 
   @media (max-width: 576px) {
-    max-width: 150px;
+    transform: rotate(270deg);
   }
 `;
 
@@ -49,11 +53,12 @@ const DogImageContainer = styled.div<{ revealAmount: number }>`
   }
 
   @media (max-width: 768px) {
-    max-width: 60%;
+    max-width: 45%;
   }
 
   @media (max-width: 576px) {
-    max-width: 75%;
+    max-width: 70%;
+    padding: 0;
   }
 `;
 
@@ -69,6 +74,7 @@ const GuessContainer = styled.div`
   padding: 48px;
 
   @media (max-width: 768px) {
+    align-items: center;
     box-sizing: border-box;
     max-width: 100%;
     padding: 0;
@@ -175,10 +181,10 @@ const AlphabetButton = styled.button`
   }
 
   @media (max-width: 576px) {
-    font-size: 22px;
-    height: 48px;
+    font-size: 20px;
+    height: 42px;
     margin: 4px;
-    width: 48px;
+    width: 42px;
   }
 `;
 
@@ -243,9 +249,8 @@ const Gameplay = ({
     <>
       <Title>Take the Dog for a Walk</Title>
       <Subtitle>
-        Guess the name of the dog who wants a walk. But be careful, if you make
-        too many wrong guesses, they will run away before you can clip the leash
-        on!
+        Guess the name of the dog who wants a walk. Careful, too many wrong
+        guesses and they may slip out of the leash!
       </Subtitle>
       <Subcontainer>
         <ImageRevealContainer>

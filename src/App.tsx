@@ -12,6 +12,7 @@ export const buttonColor = "#44cee1";
 
 const Container = styled.div<{ showBackground: boolean }>`
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -29,7 +30,7 @@ const Container = styled.div<{ showBackground: boolean }>`
     `}
 
   @media (max-width: 576px) {
-    padding: 24px;
+    padding: 4px 24px 24px 24px;
     box-sizing: border-box;
   }
 `;
