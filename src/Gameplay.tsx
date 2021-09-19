@@ -126,17 +126,6 @@ const Space = styled.div`
   }
 `;
 
-const Spacer = styled.div`
-  height: 44px;
-  @media (max-width: 768px) {
-    height: 39px;
-  }
-
-  @media (max-width: 576px) {
-    height: 37px;
-  }
-`;
-
 const FeedbackMessage = styled.div<{ correct: boolean }>`
   color: ${({ correct }) => (correct ? "green" : "red")};
   font-size: 24px;
@@ -260,8 +249,8 @@ const Gameplay = ({
     <>
       <Title>Take the Dog for a Walk</Title>
       <Subtitle>
-        Guess which dog wants a walk. Too many wrong guesses and they'll run
-        away!
+        Guess the name of the dog who wants a walk. Careful, too many wrong
+        guesses and they may slip out of the leash!
       </Subtitle>
       <Subcontainer>
         <ImageRevealContainer>
@@ -280,13 +269,11 @@ const Gameplay = ({
               <Space key={`${letter}-${index}`}>{show && letter}</Space>
             ))}
           </AnswerSpaces>
-          {guesses.length > 0 ? (
+          {guesses.length > 0 && (
             <FeedbackMessage correct={correctGuess}>
               {guesses[guesses.length - 1].toUpperCase()} is{" "}
               {correctGuess ? "CORRECT!" : "INCORRECT!"}
             </FeedbackMessage>
-          ) : (
-            <Spacer />
           )}
           <AlphabetHeader>Guess a letter:</AlphabetHeader>
           <AlphabetContainer>
