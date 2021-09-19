@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dog-game/static/css/main.26f2966c.chunk.css",
-    "main.js": "/dog-game/static/js/main.476e4ea9.chunk.js",
-    "main.js.map": "/dog-game/static/js/main.476e4ea9.chunk.js.map",
-    "runtime-main.js": "/dog-game/static/js/runtime-main.e7add30f.js",
-    "runtime-main.js.map": "/dog-game/static/js/runtime-main.e7add30f.js.map",
+    "main.js": "/dog-game/static/js/main.535e76fd.chunk.js",
+    "main.js.map": "/dog-game/static/js/main.535e76fd.chunk.js.map",
+    "runtime-main.js": "/dog-game/static/js/runtime-main.56eabf4f.js",
+    "runtime-main.js.map": "/dog-game/static/js/runtime-main.56eabf4f.js.map",
     "static/js/2.9257236d.chunk.js": "/dog-game/static/js/2.9257236d.chunk.js",
     "static/js/2.9257236d.chunk.js.map": "/dog-game/static/js/2.9257236d.chunk.js.map",
-    "static/js/3.0611f688.chunk.js": "/dog-game/static/js/3.0611f688.chunk.js",
-    "static/js/3.0611f688.chunk.js.map": "/dog-game/static/js/3.0611f688.chunk.js.map",
+    "static/js/3.3048f3bf.chunk.js": "/dog-game/static/js/3.3048f3bf.chunk.js",
+    "static/js/3.3048f3bf.chunk.js.map": "/dog-game/static/js/3.3048f3bf.chunk.js.map",
     "index.html": "/dog-game/index.html",
     "static/css/main.26f2966c.chunk.css.map": "/dog-game/static/css/main.26f2966c.chunk.css.map",
     "static/js/2.9257236d.chunk.js.LICENSE.txt": "/dog-game/static/js/2.9257236d.chunk.js.LICENSE.txt",
@@ -49,12 +49,13 @@
     "static/media/dog-photo-9.jpg": "/dog-game/static/media/dog-photo-9.80dcf5a9.jpg",
     "static/media/dog-welcome-photo.png": "/dog-game/static/media/dog-welcome-photo.e321d466.png",
     "static/media/horizontal-leash.svg": "/dog-game/static/media/horizontal-leash.3680e979.svg",
-    "static/media/leash-graphic.svg": "/dog-game/static/media/leash-graphic.f2f823a2.svg"
+    "static/media/leash-graphic.svg": "/dog-game/static/media/leash-graphic.f2f823a2.svg",
+    "static/media/sad.svg": "/dog-game/static/media/sad.c6c3a95d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e7add30f.js",
+    "static/js/runtime-main.56eabf4f.js",
     "static/js/2.9257236d.chunk.js",
     "static/css/main.26f2966c.chunk.css",
-    "static/js/main.476e4ea9.chunk.js"
+    "static/js/main.535e76fd.chunk.js"
   ]
 }
