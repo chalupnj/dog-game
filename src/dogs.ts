@@ -14,6 +14,7 @@ const findDogImage = (name: string) =>
   })!?.default;
 
 export const dogs = [
+  // max character limit = 13
   {
     image: findDogImage("dog-photo-1"),
     name: "garbanzo",
@@ -108,7 +109,7 @@ export const dogs = [
   },
   {
     image: findDogImage("dog-photo-24"),
-    name: "macklin hashbrown",
+    name: "macklin",
   },
   {
     image: findDogImage("dog-photo-25"),
