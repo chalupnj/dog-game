@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useWindowSize } from "react-use";
 
 import { Title, Subtitle, Dog, GamePhase } from "./App";
 import leashGraphic from "./images/leash-graphic.svg";
+import leashGraphicRotated from "./images/leash-graphic-rotated.svg";
 import alphabet from "./alphabet";
 
 const Subcontainer = styled.div`
@@ -32,16 +34,13 @@ const LeashImageContainer = styled.div`
   @media (max-width: 768px) {
     max-width: 250px;
   }
-
-  @media (max-width: 576px) {
-    transform: rotate(270deg);
-  }
 `;
 
 const DogImageContainer = styled.div<{ revealAmount: number }>`
   padding: 0 24px;
   position: relative;
   max-width: 400px;
+
   &:after {
     background-color: #fff;
     bottom: 0;
@@ -227,6 +226,12 @@ const Gameplay = ({
   const [guesses, setGuesses] = useState<string[]>([]);
   const [incorrectGuesses, setIncorrectGuesses] = useState<number>(0);
   const [answer, setAnswer] = useState<Answer[]>(getSpaces(dog.name, guesses));
+  const { width } = useWindowSize();
+
+  const leash = width <= 576 ? leashGraphicRotated : leashGraphic;
+
+  console.log({ width });
+  console.log({ leash });
 
   useEffect(() => {
     if (guesses.length > 0 && !dog.name.includes(guesses[guesses.length - 1])) {
@@ -266,7 +271,7 @@ const Gameplay = ({
       <Subcontainer>
         <ImageRevealContainer>
           <LeashImageContainer>
-            <Image src={leashGraphic} alt="Empty leash" />
+            <Image src={leash} alt="Empty leash" />
           </LeashImageContainer>
           <DogImageContainer
             revealAmount={(incorrectGuesses / maxIncorrectGuesses) * 100}
