@@ -235,6 +235,12 @@ const Gameplay = ({
   console.log({ width });
   console.log({ leash });
 
+  const handleKeyDown = ({ key }: KeyboardEvent) => {
+    if (!guesses.includes(key.toLowerCase())) {
+      setGuesses([...guesses, key.toLowerCase()]);
+    }
+  };
+
   useEffect(() => {
     if (guesses.length > 0 && !dog.name.includes(guesses[guesses.length - 1])) {
       setIncorrectGuesses((count) => count + 1);
@@ -261,6 +267,11 @@ const Gameplay = ({
       setGamePhase("end");
     }
   }, [answer, setGamePhase, setWin]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
 
   const correctGuess = dog.name.includes(guesses[guesses.length - 1]);
 
