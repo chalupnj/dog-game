@@ -171,12 +171,14 @@ const AlphabetHeader = styled.div`
 `;
 
 const AlphabetButton = styled.button`
+  align-items: center;
   background-color: #fff;
   border: 2px solid #000000;
+  display: flex;
   font-size: 32px;
   height: 64px;
+  justify-content: center;
   margin: 8px;
-  text-align: center;
   text-transform: uppercase;
   width: 64px;
 
