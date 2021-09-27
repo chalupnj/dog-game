@@ -159,7 +159,7 @@ const AlphabetContainer = styled.div`
 
 const AlphabetHeader = styled.div`
   font-size: 24px;
-  margin: 32px 8px 8px;
+  margin: 8px 8px 8px;
 
   @media (max-width: 768px) {
     font-size: 20px;
